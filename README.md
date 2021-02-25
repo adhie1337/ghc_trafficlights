@@ -1,9 +1,14 @@
 # ghc_trafficlights
 My solution for Google Hash Code 2021 Online Qualifications round
 
-The key highlight of the solution is that it's so simple that the calculation for all the inputs took 5 secs tops. I never implemented a simulator or a time sensitive algorithm because traffic is traffic, with a lot of cars (didn't even count them), a probabilistic solution was just enough for me.
-
 Sorry, I worked on this alone so I didn't commit every change. I left the different algorithms in the Algorithms namespace. Most of them differs in the main idea, but some of them have alternatives (with different prefixes).
+
+## Highlights
+
+ - The key highlight of the solution is that it's so simple that the calculation for all the inputs took 5 secs tops. I never implemented a simulator or a time sensitive algorithm because traffic is traffic, with a lot of cars (didn't even count them), a probabilistic solution was just enough for me.
+ - The other thing that was interesting is that (after taking a quick look at the best solution files) for ~99% of the cases, the green time range was 1 for the lights. I guess this round-robin based approach worked really good for me (however unintentional that was). I didn't try adding one for every time though, maybe it could have been a bit better, or couldn't, I guess I'll never know.
+ - I was planning to do some insights on the data, but first I created the simplest algorithms ever, and it resulted a lot of points, after that I tried to look but the amounts were so scary, I ended up adjusting the simple solution with small improvements.
+ - In the last hour (from the 4 of them maybe) I only managed to improve 1%, I guess I was stuck in a local maximum but I didn't have the time to implement anything smarter. The final score was 9,532,454 points.
 
 ## How the solution idea was developing in my head
 

@@ -1,0 +1,82 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "all",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/src/TrafficLights.Console/bin/Debug/net5.0/TrafficLights.Console.dll",
+            "args": ["problems/a.txt", "problems/b.txt", "problems/c.txt", "problems/d.txt", "problems/e.txt", "problems/f.txt"],
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
+            "name": "a",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/src/TrafficLights.Console/bin/Debug/net5.0/TrafficLights.Console.dll",
+            "args": ["problems/a.txt"],
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
+            "name": "b",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/src/TrafficLights.Console/bin/Debug/net5.0/TrafficLights.Console.dll",
+            "args": ["problems/b.txt"],
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
+            "name": "c",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/src/TrafficLights.Console/bin/Debug/net5.0/TrafficLights.Console.dll",
+            "args": ["problems/c.txt"],
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
+            "name": "d",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/src/TrafficLights.Console/bin/Debug/net5.0/TrafficLights.Console.dll",
+            "args": ["problems/d.txt"],
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
+            "name": "e",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/src/TrafficLights.Console/bin/Debug/net5.0/TrafficLights.Console.dll",
+            "args": ["problems/e.txt"],
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
+            "name": "f",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/src/TrafficLights.Console/bin/Debug/net5.0/TrafficLights.Console.dll",
+            "args": ["problems/f.txt"],
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        }
+    ]
+}

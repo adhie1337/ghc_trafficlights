@@ -10,7 +10,7 @@ Sorry, I worked on this alone so I didn't commit every change. I left the differ
  1. The first version was to assign 1 to every street at every intersection. This resulted most of the points (~7.7m). ([see Algorithms.Simplest](https://github.com/adhie1337/ghc_trafficlights/blob/main/src/TrafficLights.Console/Algorithms/Simplest.cs))
  2. The same, but I filtered out the streets that no car used. ([see Algorithms.SimplestWithoutUnnecessary](https://github.com/adhie1337/ghc_trafficlights/blob/main/src/TrafficLights.Console/Algorithms/SimplestWithoutUnnecessary.cs))
  3. I created a weight map for all the streets by counting how many cars will *ever* get through that street, and normalized the values by dividing by the greatest common divisor. ([see Algorithms.SimplestWithoutUnnecessary](https://github.com/adhie1337/ghc_trafficlights/blob/main/src/TrafficLights.Console/Algorithms/SimplestWithoutUnnecessary.cs))
- 4. From here, I branched:
+ 4. From here, I branched (I hope that from now on, you'll get the idea where the classes are):
      - The best (and first one) was taking the square root of the weights
      - I tried log2 of the weights, results were horrible
      - I tried 3rd square root, didn't help much

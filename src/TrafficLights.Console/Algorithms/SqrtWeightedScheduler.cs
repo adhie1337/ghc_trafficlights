@@ -8,6 +8,7 @@ namespace TrafficLights.Console.Algorithms
     {
         public static Schedule Calculate(Input input)
         {
+
             var streetPopularity = input.Cars.SelectMany(_ => _.Intersections)
                 .ToLookup(_ => _)
                 .ToDictionary(_ => _.Key, _ => _.Count());
@@ -20,7 +21,7 @@ namespace TrafficLights.Console.Algorithms
             var s = input.Intersections
                 .Select(intersection => (intersection, intersection.From
                     .Where(s => intersectionPopularity[intersection.Id].Popularity.TryGetValue(s.Id, out var p) && p != 0)
-                    .Select(s => (s, (int)Math.Max(1, Math.Min(10, Math.Floor(Math.Pow(intersectionPopularity[intersection.Id].Popularity[s.Id] / intersectionPopularity[intersection.Id].Sum * 100d, 1d / 3d))))))
+                    .Select(s => (s, (int)Math.Max(1, Math.Floor(2d * Math.Pow(intersectionPopularity[intersection.Id].Popularity[s.Id], 1d / 3d)))))
                     .ToArray()))
                 .Where(_ => _.Item2.Any())
                 .ToArray();

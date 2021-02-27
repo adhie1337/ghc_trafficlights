@@ -1,0 +1,8 @@
+digraph g {
+                graph [overlap=scale, nslimit=5, nslimit1=5, splines=line];
+  2 -> 0 [label="rue-de-londres: 1", minlen=1];
+  0 -> 1 [label="rue-d-amsterdam: 1", minlen=1];
+  3 -> 1 [label="rue-d-athenes: 1", minlen=1];
+  2 -> 3 [label="rue-de-rome: 2", minlen=2];
+  1 -> 2 [label="rue-de-moscou: 3", minlen=3];
+}

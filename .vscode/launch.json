@@ -13,6 +13,17 @@
             "stopAtEntry": false
         },
         {
+            "name": "dot",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/src/TrafficLights.DotFormatter/bin/Debug/net5.0/TrafficLights.DotFormatter.dll",
+            "args": ["problems/a.txt", "problems/b.txt", "problems/c.txt", "problems/d.txt", "problems/e.txt", "problems/f.txt"],
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
             "name": "a",
             "type": "coreclr",
             "request": "launch",

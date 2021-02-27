@@ -14,12 +14,19 @@ namespace TrafficLights.Console
 
                 var input = InputParser.Parse(File.ReadLines(path));
 
-                var schedule = Algorithms.SqrtWeightedScheduler.Calculate(input);
+                var schedule = SchedulePrinter.Print(Algorithms.SqrtWeightedScheduler.Calculate(input));
 
-                File.WriteAllText(path.Replace("problems/", "solutions/"), SchedulePrinter.Print(schedule));
+                var outputPath = path.Replace("problems/", "solutions/");
+                var parentDir = new FileInfo(outputPath).Directory;
+
+                if (!parentDir!.Exists) parentDir.Create();
+
+                File.WriteAllText(outputPath, schedule);
 
                 Console.WriteLine();
             }
+
+            Console.WriteLine("Done!");
         }
     }
 }

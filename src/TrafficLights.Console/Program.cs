@@ -2,6 +2,7 @@ namespace TrafficLights.Console
 {
     using System;
     using System.IO;
+    using TrafficLights.Common;
 
     class Program
     {

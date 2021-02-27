@@ -1,7 +1,7 @@
 namespace TrafficLights.Console.Algorithms
 {
-    using System;
     using System.Linq;
+    using TrafficLights.Common;
 
     public static class Simplest
     {

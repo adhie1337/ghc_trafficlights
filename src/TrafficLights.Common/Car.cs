@@ -8,12 +8,14 @@ namespace TrafficLights.Common
     {
         public readonly int PathLength;
 
+        public readonly int Id;
+
         public readonly Street[] Streets;
 
-        public readonly (ulong StreetId, int IntersectionId)[] Intersections;
+        public readonly (int StreetId, int IntersectionId)[] Intersections;
 
         public string Path => string.Join(" -> ", this.Streets.Select(_ => _.Id));
 
-        public Car(int pathLength, Street[] streets, (ulong, int)[] intersections) => (this.PathLength, this.Streets, this.Intersections) = (pathLength, streets, intersections);
+        public Car(int id, int pathLength, Street[] streets, (int, int)[] intersections) => (this.Id, this.PathLength, this.Streets, this.Intersections) = (id, pathLength, streets, intersections);
     }
 }

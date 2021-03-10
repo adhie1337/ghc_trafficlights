@@ -31,7 +31,7 @@ namespace TrafficLights.Common
                 var name = line[2];
                 var time = int.Parse(line[3]);
 
-                streets[i] = new Street(start, end, name, time);
+                streets[i] = new Street(i, start, end, name, time);
                 streetMap[name] = streets[i];
             }
 
@@ -54,7 +54,7 @@ namespace TrafficLights.Common
                     .Select(p => (p.First.Id, intersectionMap[(p.First.Id, p.Second.Id)]))
                     .ToArray();
 
-                cars[i] = new Car(length, path, intersectionPath);
+                cars[i] = new Car(i, length, path, intersectionPath);
             }
 
             return new Input(duration, intersectionCount, streetCount, carCount, reward, streets, cars, intersections);

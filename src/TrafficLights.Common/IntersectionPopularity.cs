@@ -9,9 +9,9 @@ namespace TrafficLights.Common
 
         public readonly int Sum;
 
-        public readonly Dictionary<ulong, int> Popularity;
+        public readonly Dictionary<int, int> Popularity;
 
-        public IntersectionPopularity(int id, int sum, Dictionary<ulong, int> popularity) => (this.Id, this.Sum, this.Popularity) = (id, sum, popularity);
+        public IntersectionPopularity(int id, int sum, Dictionary<int, int> popularity) => (this.Id, this.Sum, this.Popularity) = (id, sum, popularity);
 
         public IntersectionPopularity Simplify
         {

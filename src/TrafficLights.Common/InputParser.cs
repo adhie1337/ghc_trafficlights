@@ -51,7 +51,7 @@ namespace TrafficLights.Common
                 var length = int.Parse(line[0]);
                 var path = line.Skip(1).Select(_ => streetMap[_]).ToArray();
                 var intersectionPath = path.Zip(path.Skip(1))
-                    .Select(p => (p.First.Id, intersectionMap[(p.First.Id, p.Second.Id)]))
+                    .Select(p => new StreetIntersection(p.First.Id, intersectionMap[(p.First.Id, p.Second.Id)]))
                     .ToArray();
 
                 cars[i] = new Car(i, length, path, intersectionPath);

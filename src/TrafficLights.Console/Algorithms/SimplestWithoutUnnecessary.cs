@@ -15,6 +15,7 @@ namespace TrafficLights.Console.Algorithms
                     .Select(f => (f, 1))
                     .ToArray()))
                 .Where(_ => _.Item2.Any())
+                .Select(_ => new IntersectionSchedule(_._, _.Item2.Select(_ => new StreetSchedule(_.f, _.Item2)).ToArray()))
                 .ToArray();
 
             return new Schedule(s);

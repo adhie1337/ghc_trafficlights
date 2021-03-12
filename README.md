@@ -47,11 +47,11 @@ I worked on this alone, so I didn't commit every change. I left the different al
 
 ## References
 
-[1] - https://github.com/KristofHolecz/hash-code-2021-traffic-signaling-insights-reporter
-[2] - https://curiouscoding.nl/hashcode-2021/
-[3] - https://adhie.website
-[4] - https://github.com/adhie1337/ghc_trafficlights/blob/main/src/TrafficLights.Console/Algorithms/Simplest.cs
-[5] - https://github.com/adhie1337/ghc_trafficlights/blob/main/src/TrafficLights.Console/Algorithms/SimplestWithoutUnnecessary.cs
-[6] - https://github.com/adhie1337/ghc_trafficlights/blob/main/src/TrafficLights.Console/Algorithms/WeightedScheduler.cs
-[7] - https://github.com/adhie1337/ghc_trafficlights/blob/main/src/TrafficLights.Console/Algorithms/SqrtWeightedScheduler.cs
-[8] - https://github.com/adhie1337/ghc_trafficlights/blob/main/src/TrafficLights.Console/Algorithms/Genetic.cs
+ - [1] - https://github.com/KristofHolecz/hash-code-2021-traffic-signaling-insights-reporter
+ - [2] - https://curiouscoding.nl/hashcode-2021/
+ - [3] - https://adhie.website
+ - [4] - [Simplest.cs](https://github.com/adhie1337/ghc_trafficlights/blob/main/src/TrafficLights.Console/Algorithms/Simplest.cs)
+ - [5] - [SimplestWithoutUnnecessary.cs](https://github.com/adhie1337/ghc_trafficlights/blob/main/src/TrafficLights.Console/Algorithms/SimplestWithoutUnnecessary.cs)
+ - [6] - [WeightedScheduler.cs](https://github.com/adhie1337/ghc_trafficlights/blob/main/src/TrafficLights.Console/Algorithms/WeightedScheduler.cs)
+ - [7] - [SqrtWeightedScheduler.cs](https://github.com/adhie1337/ghc_trafficlights/blob/main/src/TrafficLights.Console/Algorithms/SqrtWeightedScheduler.cs)
+ - [8] - [Genetic.cs](https://github.com/adhie1337/ghc_trafficlights/blob/main/src/TrafficLights.Console/Algorithms/Genetic.cs)

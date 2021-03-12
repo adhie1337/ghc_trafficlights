@@ -40,8 +40,11 @@ I worked on this alone, so I didn't commit every change. I left the different al
 
 5. The first thing I tried was fine-tuning the weighted scheduler algorithm, but I couldn't get a significant increase.
 6. After a day, I started working on a proof of concept implementation of the genetic algorithm that was guessing the given string ("Hello World!" at first, paragraphs of the Lorem Ipsum text later.) character by character. I managed to come up with a pretty fast algorithm, but on the easy problem where the scoring function was an array difference counting.
+
    After the break, I managed to get back into the game when my good friend implemented the referee[1]. The goal was to re-implement it in C# to spare the cost of interop because the scorer needed to be fast for the genetic algorithm. Sadly I couldn't come up with the perfect solution. What I had, was calculating a score near what the judge system did (+-5%, I think). But it was awfully slow. I started speeding it up instead of aiming for the perfect one. During the optimization, I still managed to change the scores, but the differences were minor.
+
    Once I managed to reduce the needed time of the scoring to 0.3s on D, I assembled the genetic algorithm with a population size of 10 running for 10 rounds. It wasn't enough, but I totally lost the speed in the last couple of days.
+
    At the last minute, I modified the algorithm to run with a time limit. Results were still poor: in 10 minutes, it only could do 16 rounds. Based on that, I can say that it wasn't enough. But as a first one, I'm happy with it! For the code, see [8].
 
 

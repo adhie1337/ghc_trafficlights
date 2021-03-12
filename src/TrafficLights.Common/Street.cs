@@ -5,6 +5,8 @@ namespace TrafficLights.Common
     [DebuggerDisplay("{Id}: {Name}")]
     public readonly struct Street
     {
+        public readonly int Id;
+
         public readonly int Start;
 
         public readonly int End;
@@ -13,12 +15,6 @@ namespace TrafficLights.Common
 
         public readonly int Time;
 
-        public readonly ulong Id;
-
-        public Street(int start, int end, string name, int time, ulong id) => (this.Start, this.End, this.Name, this.Time, this.Id) = (start, end, name, time, id);
-
-        public Street(int start, int end, string name, int time) : this(start, end, name, time, NextId++) {}
-
-        private static ulong NextId = 0;
+        public Street(int id, int start, int end, string name, int time) => (this.Id, this.Start, this.End, this.Name, this.Time) = (id, start, end, name, time);
     }
 }

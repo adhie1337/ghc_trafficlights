@@ -1,9 +1,10 @@
 namespace TrafficLights.Console.Algorithms
 {
+    using System;
     using System.Linq;
     using TrafficLights.Common;
 
-    public static class WeightedScheduler
+    public static class SqrtWeightedSchedulerOrdered
     {
         public static Schedule Calculate(Input input)
         {
@@ -19,9 +20,10 @@ namespace TrafficLights.Console.Algorithms
             var s = input.Intersections
                 .Select(intersection => (intersection, intersection.From
                     .Where(s => intersectionPopularity[intersection.Id].Popularity.TryGetValue(s.Id, out var p) && p != 0)
-                    .Select(s => (s, intersectionPopularity[intersection.Id].Popularity[s.Id]))
+                    .Select(s => (s, (int)Math.Max(1, Math.Floor(Math.Sqrt(intersectionPopularity[intersection.Id].Popularity[s.Id]) / 2.0))))
                     .ToArray()))
                 .Where(_ => _.Item2.Any())
+                .Select(_ => (_.intersection, _.Item2.OrderByDescending(inner => streetPopularity[new StreetIntersection(inner.s.Id, _.intersection.Id)]).Reverse().ToArray()))
                 .Select(_ => new IntersectionSchedule(_.intersection, _.Item2.Select(_ => new StreetSchedule(_.s, _.Item2)).ToArray()))
                 .ToArray();
 

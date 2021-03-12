@@ -1,4 +1,25 @@
 {
     "files.eol": "\n",
-    "files.encoding": "utf8"
+    "files.encoding": "utf8",
+    "grammarly.overrides": [
+        {
+            "files": [
+                "**/README.md"
+            ],
+            "config": {
+                "audience": "knowledgeable",
+                "dialect": "american",
+                "domain": "technical",
+                "emotions": [
+                    "neutral",
+                    "joyful",
+                    "friendly",
+                    "analytical"
+                ],
+                "goals": [
+                    "describe"
+                ]
+            }
+        }
+    ]
 }
